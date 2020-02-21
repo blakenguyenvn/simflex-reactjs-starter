@@ -23,6 +23,6 @@ local dev server
 ### Checkout project
 
 ```bash
-git clone git@github.com:tuannguyen91vn/simflex-reactj-starter.git
-cd simflex-reactj-starter
+git clone git@github.com:tuannguyen91vn/simflex-reactjs-starter.git
+cd simflex-reactjs-starter
 ```
