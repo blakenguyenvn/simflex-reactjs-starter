@@ -1,5 +1,6 @@
 import * as React from 'react';
-import * as HelloWorldStyles from '../styles/HelloWorld.scss';
+import * as HelloWorldStyles from '../assets/styles/components/HelloWorld.scss';
+import Button from '@material-ui/core/Button';
 
 interface HelloWorldState {
    title: string,
@@ -18,13 +19,20 @@ export class HelloWorld extends React.Component<{}, HelloWorldState> {
 	};
 
   render() {
-    return <div className={HelloWorldStyles.card}>
-      <h1 className={`${HelloWorldStyles.heading} ${HelloWorldStyles.textCenter}`}>
-        {this.state.title}
-      </h1>
-      <p className={`${HelloWorldStyles.introduction} ${HelloWorldStyles.textCenter}`}>
-        {this.state.introduction}
-      </p>
-    </div>;
+    return (
+      <div className={HelloWorldStyles.card}>
+        <h1 className={HelloWorldStyles.heading}>
+          {this.state.title}
+        </h1>
+        <p className={HelloWorldStyles.introduction}>
+          {this.state.introduction}
+        </p>
+        <div>
+          <Button variant="contained" color="secondary">
+            Go To App
+          </Button>
+        </div>
+      </div>
+    );
   }
 };
